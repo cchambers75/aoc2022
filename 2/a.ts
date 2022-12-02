@@ -7,7 +7,6 @@ const elfArr = input.split("\n").map((x) => [x[0], x[2]]);
 let score = 0;
 
 elfArr.forEach((x) => {
-	console.log(x);
 	if (
 		(x[0] === "A" && x[1] === "X") ||
 		(x[0] === "B" && x[1] === "Y") ||
