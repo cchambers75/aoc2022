@@ -69,17 +69,10 @@ for (let i = 0; i < sack.length; i += 3) {
 
 groups.forEach((x) => {
 	const [first, second, third] = x;
-	const letterSet = new Set();
 	const comp1 = first.filter((y) => second.includes(y));
 	const comp2 = second.filter((z) => third.includes(z));
 	const final = comp1.filter((a) => comp2.includes(a));
 	total += prio.get(final[0]);
-	// first.forEach((x) => {
-	// 	if (second.includes(x) && !letterSet.has(x)) {
-	// 		letterSet.add(x);
-	// 		total += prio.get(x);
-	// 	}
-	// });
 });
 
 console.log(total);
